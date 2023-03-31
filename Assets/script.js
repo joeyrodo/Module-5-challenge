@@ -20,4 +20,8 @@ $(function () {
   // attribute of each time-block be used to do this?
   //
   // TODO: Add code to display the current date in the header of the page.
+  const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  currentDayText = document.getElementById("currentDay");
+  currentDayText.textContent = weekdays[dayjs().get('day')] + ", " + months[dayjs().get('month')] + " " + dayjs().get('date') + ", " + dayjs().get('year');
 });
