@@ -16,7 +16,7 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  $( ".saveBtn" ).on('click', function() {
+  $(".saveBtn").on('click', function () {
     console.log("button clicked");
     var thisTextArea = this.parentElement.childNodes[3].value;
     var storageId = this.parentElement.id;
@@ -27,6 +27,7 @@ $(function () {
     }
     else {
       console.log("Nothing here!");
+      console.log(storageId);
     }
   });
 
@@ -35,7 +36,20 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-
+  var currentHour = dayjs().get('hour') - 9;
+  console.log(currentHour);
+  for (i = 0; i < 9; i++) {
+    var block = document.getElementsByClassName('time-block')[i].id;
+    if (block < currentHour) {
+      document.getElementsByClassName('time-block')[i].classList.add("past");
+    }
+    else if (block == currentHour) {
+      document.getElementsByClassName('time-block')[i].classList.add("present");
+    }
+    else if (block > currentHour) {
+      document.getElementsByClassName('time-block')[i].classList.add("future");
+    }
+  }
 
   // TODO: Add code to display the current date in the header of the page.
   const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
