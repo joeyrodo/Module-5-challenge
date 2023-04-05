@@ -6,9 +6,9 @@ This is a Work Day Schedule that will save user input in time slot boxes as well
 ## Installation
 
 - N/A
-- [Link to Website](link)
+- [Link to Website](https://joeyrodo.github.io/Module-5-Challenge/)
 
 ## Usage
 
 - Click on a time box to enter a description or goal for that hour
-- Clock the blue "save" button to save the text to that box for the future.
+- Click the blue "save" button to save the text to that box for the future.
