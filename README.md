@@ -1,5 +1,5 @@
-# Module 5 Challenge
-This is a Work Day Schedule that will save user input in time slot boxes as well as update the color of the time blocks depending on if its time is before, during, or after the current hour. The current date is also displayed at the top of the page.
+# Work Day Scheduler
+- This is a Work Day Scheduler that will save user input in time slot boxes as well as update the color of the time blocks depending on if its time is before, during, or after the current hour. The current date is also displayed at the top of the page.
 
 ![Screenshot of application](./Assets/screenshot.png)
 
